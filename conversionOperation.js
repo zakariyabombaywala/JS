@@ -24,5 +24,16 @@ let booleanisLoggedIn = Boolean(isLoggedIn);
 let someNumber = 55;
 
 let stringNumber = String(someNumber);
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
+
+let str1 = "Hello ";
+let str2 = "Zakariya";
+
+let str3 = str1 + str2;
+console.log(str3);
+
+console.log(1 + "2");
+console.log("1" + 2);
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2");
