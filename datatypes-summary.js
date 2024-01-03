@@ -20,3 +20,7 @@ let weekend = { 1: "Saturday", 2: "Sunday" };
 const myFun = function () {
   console.log("Hello world");
 };
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non-Primitive)
