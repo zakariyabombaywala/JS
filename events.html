@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <ul id="images">
+      <li>
+        <img
+          style="width: 200px"
+          id="img1"
+          src="https://images.pexels.com/photos/19797253/pexels-photo-19797253/free-photo-of-red-berries-on-a-branch-with-a-drop-of-water.jpeg"
+          alt=""
+        />
+      </li>
+      <li>
+        <img
+          style="width: 200px"
+          src="https://images.pexels.com/photos/19691592/pexels-photo-19691592/free-photo-of-a-plate-with-cheese-grapes-and-figs-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          id="img2"
+        />
+      </li>
+      <li>
+        <img
+          style="width: 200px"
+          src="https://images.pexels.com/photos/4860479/pexels-photo-4860479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt=""
+          id="img3"
+        />
+      </li>
+      <li>
+        <img
+          style="width: 200px"
+          src="https://images.pexels.com/photos/12850804/pexels-photo-12850804.jpeg"
+          alt=""
+          id="img3"
+        />
+      </li>
+      <li id="google">
+        <a
+          style="color: aliceblue; text-decoration: none"
+          href="http://www.google.com"
+          >Google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+
+    // attachEvent()
+    // jQuery - on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked");
+    //     e.stopPropagation()
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // }, false)
+
+    document.querySelector("#images").addEventListener("click", function (e) {
+      console.log("Parent Node : ", e.target.parentNode);
+      console.log("ID : ", e.target.id);
+      console.log("Tagname : ", e.target.tagName);
+
+      if (e.target.tagName === "IMG") {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    });
+
+    //removeIt.parentNode.removeChild(removeIt)
+  </script>
+</html>
